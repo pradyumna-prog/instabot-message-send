@@ -12,8 +12,10 @@ def startInsta(driver):
     #clicking login
     driver.find_element_by_xpath('//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[4]/button').click()
     sleep(5)
+    driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/div/div/button').click()
+    sleep(5)
     #clicking not now on turn on notification
-    driver.find_element_by_xpath('/html/body/div[4]/div/div/div[3]/button[2]').click()
+    driver.find_element_by_xpath('/html/body/div[4]/div/div/div/div[3]/button[2]').click()
 
 def getFollowersList(driver):
     #clicking on my profile
@@ -23,7 +25,7 @@ def getFollowersList(driver):
     driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a').click()
 def message(driver):
     #search person
-    driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input').send_keys('_kanishksrivastav_')
+    driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input').send_keys('tripathishivanshi')
     sleep(2)
     #click on name
     driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/div[2]/div[2]/div/a[1]/div/div[2]/div/span').click()
@@ -34,7 +36,7 @@ def message(driver):
     #send msg
     c = 30
     while c:
-        driver.find_element_by_xpath('//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea').send_keys('hiii\n')
+        driver.find_element_by_xpath('//*[@id="react-root"]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea').send_keys('{}\n'.format(c))
         sleep(1)
         c-=1
 driver = webdriver.Chrome()
